@@ -1,0 +1,4 @@
+SELECT e.last_name,e.first_name,d.dept_no 
+FROM employees AS e
+INNER JOIN dept_emp AS d
+ON e.emp_no=d.emp_no;

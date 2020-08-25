@@ -1,0 +1,11 @@
+SELECT
+    emp_no,
+    salary 
+FROM
+    salaries 
+GROUP BY
+    emp_no 
+HAVING
+    min( from_date ) 
+ORDER BY
+    emp_no DESC
