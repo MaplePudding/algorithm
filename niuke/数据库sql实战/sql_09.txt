@@ -1,0 +1,5 @@
+SELECT d.dept_no, d.emp_no, s.salary
+FROM dept_manager AS d INNER JOIN salaries as s
+ON d.emp_no = s.emp_no
+AND d.to_date = s.to_date
+AND d.to_date = '9999-01-01'
