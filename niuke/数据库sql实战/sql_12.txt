@@ -1,0 +1,2 @@
+select a.dept_no, b.emp_no, max(b.salary) from dept_emp a inner join salaries b  on
+a.emp_no=b.emp_no and a.to_date=b.to_date and  a.t
