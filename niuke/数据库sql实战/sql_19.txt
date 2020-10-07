@@ -1,0 +1,6 @@
+SELECT em.last_name, em.first_name, dp.dept_name
+FROM (employees AS em
+LEFT JOIN dept_emp AS de
+ON em.emp_no = de.emp_no)
+LEFT JOIN departments AS dp
+ON de.dept_no = dp.dept_no

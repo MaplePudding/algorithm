@@ -1,0 +1,8 @@
+select a.dept_no,a.dept_name,r.sum
+from departments a left join
+(
+    select w.dept_no,count(w.dept_no) as sum
+    from dept_emp w left join salaries e on w.emp_no = e.emp_no
+    group by w.dept_no
+) r
+on a.dept_no = r.dept_no

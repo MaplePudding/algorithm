@@ -1,0 +1,4 @@
+select title, count(title) ct
+    from titles
+    group by title
+    having ct >= 2;

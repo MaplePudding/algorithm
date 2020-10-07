@@ -1,0 +1,12 @@
+select s1.emp_no,(s1.salary-e1.salary) as growth
+from
+(select emp_no,salary
+from salaries
+where to_date='9999-01-01') as s1
+inner join
+(select s.emp_no,s.salary
+from salaries as s
+inner join employees as e
+on s.emp_no = e.emp_no and s.from_date=e.hire_date) as e1
+on s1.emp_no=e1.emp_no
+order by growth

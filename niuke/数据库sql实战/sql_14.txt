@@ -1,0 +1,4 @@
+SELECT title, COUNT(*) t
+FROM (SELECT DISTINCT emp_no,title FROM titles)
+GROUP BY title
+HAVING t>=2

@@ -1,0 +1,5 @@
+select emp_no,salary,
+       dense_rank() over(order by salary desc) as rank
+from salaries
+where to_date='9999-01-01'
+order by rank,emp_no asc
