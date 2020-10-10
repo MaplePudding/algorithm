@@ -1,0 +1,4 @@
+UPDATE salaries
+set salary = salary*1.1
+where salaries.to_date='9999-01-01'
+and salaries.emp_no in (select emp_no from emp_bonus);

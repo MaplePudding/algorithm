@@ -1,0 +1,5 @@
+select title,description
+from film f
+where f.film_id in (select fc.film_id
+                    from category c join film_category fc on c.category_id=fc.category_id
+                    where name='Action')

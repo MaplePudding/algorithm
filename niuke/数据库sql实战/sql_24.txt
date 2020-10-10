@@ -1,0 +1,10 @@
+select de.dept_no,a.emp_no,s.salary
+from
+(select emp_no
+from employees
+where emp_no not in (select emp_no
+from dept_manager)
+) a
+inner join dept_emp de on a.emp_no=de.emp_no
+inner join salaries s on a.emp_no=s.emp_no
+where s.to_date='9999-01-01'

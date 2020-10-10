@@ -1,0 +1,1 @@
+DROP TABLE audit; CREATE TABLE audit( emp_no INT NOT NULL, create_date datetime NOT NULL, FOREIGN KEY(emp_no) REFERENCES employees_test(id) )

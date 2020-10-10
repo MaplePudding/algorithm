@@ -1,0 +1,6 @@
+select s1.emp_no,s2.from_date,(s2.salary-s1.salary) salary_growth
+from salaries s1
+inner join salaries s2
+on s1.emp_no = s2.emp_no and s1.to_date = s2.from_date
+where s2.salary-s1.salary > 5000
+order by salary_growth desc
